@@ -9,8 +9,10 @@ export const metadata = {
 
 export default function RootLayout({
   children,
+  modal,
 }: {
   children: React.ReactNode
+  modal: React.ReactNode
 }) {
   return (
     <html lang="en">
@@ -19,6 +21,7 @@ export default function RootLayout({
           <p>Header</p>
         </header>
         {children}
+        {modal}
         <footer style={{ backgroundColor: 'ghostwhite', padding: '1rem' }}>
           <p>Footer</p>
         </footer>

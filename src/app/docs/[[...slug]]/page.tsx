@@ -14,7 +14,7 @@ const page = ({
     slug: string[]
   }
 }) => {
-  return <div>docs home Page {params.slug.join('/')}</div>
+  return <div>docs home Page {params.slug && params.slug.join(' ')}</div>
 }
 
 export default page
