@@ -1,4 +1,3 @@
-import action from './actions'
 import Link from 'next/link'
 
 const getWelcome1 = (): Promise<string> => {
@@ -11,12 +10,12 @@ const getWelcome1 = (): Promise<string> => {
 
 const getWelcome = async () => {
   // const res = await fetch('http://localhost:3000/api/hello')
-  const res = await fetch('http://localhost:3000/api/hello', {
-    cache: 'no-store',
-  })
   // const res = await fetch('http://localhost:3000/api/hello', {
-  //   next: { tags: ['collection'] },
+  //   cache: 'no-store',
   // })
+  const res = await fetch('http://localhost:3000/api/hello', {
+    next: { tags: ['collection'] },
+  })
   // const res = await fetch('http://localhost:3000/api/hello', {
   //   next: { revalidate: 100 },
   // })
